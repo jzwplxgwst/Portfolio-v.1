@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+:root {
+    --background-color: #f8f5f2;
+    --primary-color: #d6dbe2;
+    --secondary-color: #5f7f9c;
+    --text-color: #3e3e3e;
+    --accent-color: #5f7f9c;
+    --button-color: #5f7f9c;
+    --button-hover-color: #4a6a87;
+    --card-background: #ffffff;
+    --input-background: #ffffff;
+}
+
+body.dark-mode {
+    --background-color: #1e1e1e;
+    --primary-color: #2c2c2c;
+    --secondary-color: #a8b8c9s;
+    --text-color: #f8f5f2;
+    --accent-color: #a8b8c9;
+    --button-color: #4a6a87;
+    --button-hover-color: #3b556f;
+    --card-background: #2c2c2c;
+    --input-background: #333;
+}
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: -100px;
+    transition: top 0.3s ease;
+    z-index: 1000;
+}
+
+header.visible {
+    top: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+nav img {
+    margin-left: 15px;
+}
+
+.dark-mode-toggle {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--button-hover-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.linkedin-image, .github-image {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.intro-text {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.intro-text .text {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.intro-text h2 {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 72px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.intro-text p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+.intro-text img {
+    width: 200px;
+    height: auto;
+}
+
+.cv-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+#about, #contact {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#projects {
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#projects .background {
+    background-color: var(--card-background);
+}
+
+.project {
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.project-title {
+    font-size: 22px;
+    color: var(--accent-color);
+}
+
+.project-description {
+    color: var(--secondary-color);
+}
+
+.button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #4a6a87;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--button-hover-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1em;
+}
+
+.button, .cv-button, #contact button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .cv-button:hover, #contact button:hover {
+    background-color: var(--button-hover-color);
+}
+
+#contact {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#contact button {
+    padding: 12px 20px;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: var(--button-hover-color);
+}

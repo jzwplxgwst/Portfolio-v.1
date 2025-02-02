@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Image</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #image {
+      position: absolute;
+      transition: all 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="image" src="pompom.png" alt="Random Image" width="100">
+
+  <script>
+    const image = document.getElementById('image');
+
+    // Function to move image to a random position
+    function moveImage(e) {
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+
+      // Random position within the screen boundaries
+      const randomX = Math.random() * (screenWidth - image.width);
+      const randomY = Math.random() * (screenHeight - image.height);
+
+      image.style.left = randomX + 'px';
+      image.style.top = randomY + 'px';
+    }
+
+    // Add hover event listener
+    image.addEventListener('mouseenter', moveImage);
+  </script>
+
+</body>
+</html>
